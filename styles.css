@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body {
+  background-image: linear-gradient(to top left, #9c80dc 0%, #f2b2e0 100%);
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.display-container {
+  width: 90%;
+  max-width: 430px;
+  position: relative;
+  height: 70px;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.display-container input {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.5rem;
+  background-color: #160628;
+  box-shadow: 0 6px #9772eb;
+  color: yellow;
+}
+.display-container input::placeholder {
+  color: yellow;
+}
+.display-container button {
+  position: absolute;
+  font-size: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background-color: transparent;
+  border: none;
+}
+.display-container button i {
+  color: rgb(29, 234, 217);
+}
+/* styling the input container */
+.input-container {
+  position: relative;
+  padding: 15px 25px;
+  max-width: 430px;
+  width: 90%;
+  background-color: #160628;
+  border-radius: 20px;
+  box-shadow: 0 6px #9772eb;
+}
+.input-container p {
+  font-size: 1.5rem;
+  display: inline-block;
+  color: white;
+}
+.input-container p:nth-child(2) {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  color: rgb(240, 240, 8);
+}
+.input-container input[dataLengthSlider] {
+  display: block;
+  width: 100%;
+  margin: 30px 0 40px 0;
+  -webkit-appearance: none;
+  border-radius: 30px;
+  border: 3px solid transparent;
+}
+input[dataLengthSlider]:focus {
+  border: 3px solid yellow;
+}
+input[dataLengthSlider]::-webkit-slider-runnable-track {
+  height: 8px;
+}
+input[dataLengthSlider]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  border-radius: 50%;
+  margin-top: calc(8px / 2 - 15px);
+  cursor: pointer;
+}
+input[dataLengthSlider]::-webkit-slider-thumb:hover {
+  background-color: #160628;
+  border: 2px solid yellow;
+  box-shadow: 0 0 10px 2px yellow, 0 0 20px 2px rgba(255, 255, 0, 0.829);
+}
+.input-container > div label {
+  vertical-align: middle;
+  color: white;
+}
+.input-container > div input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #6cf9f2;
+  cursor: pointer;
+  /* to center the tick inside input[type=checkbox] */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="checkbox"]:checked::after {
+  content: "\2713"; /*tick will appear using this code*/
+  font-size: 20px;
+  font-weight: bolder;
+}
+.input-container > div input:checked {
+  background-color: #6cf9f2;
+}
+.input-container > div label {
+  font-size: 1.3rem;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  transform: translate(0, 2px);
+}
+.strength-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.strength-container p {
+  transform: translate(0, -4px);
+}
+.strength-container > div[data-indicator] {
+  width: 18px;
+  height: 18px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 1px whitesmoke;
+}
+button[class="generate button"] {
+  padding: 10px 0;
+  margin: 20px 0;
+  width: 100%;
+  background-color: #bc15f4;
+  font-size: 1.5rem;
+  color: yellow;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 6px yellow;
+}
+button[class="generate button"]:active {
+  box-shadow: 0px 1px yellow;
+  transform: translate(0px, 6px);
+}
+span[dataCopyMessage] {
+  position: absolute;
+  top: -35px;
+  right: -22px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(91, 5, 91);
+  padding: 5px;
+  border-radius: 10px;
+  color: yellow;
+  display: none;
+}
